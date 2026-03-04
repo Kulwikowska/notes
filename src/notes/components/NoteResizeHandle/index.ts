@@ -1,0 +1,2 @@
+export { NoteResizeHandle } from './NoteResizeHandle'
+

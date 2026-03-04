@@ -1,0 +1,2 @@
+export { NoteTextarea } from './NoteTextarea'
+

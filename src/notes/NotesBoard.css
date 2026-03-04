@@ -1,0 +1,69 @@
+.board {
+  position: relative;
+  flex: 1;
+  min-height: 35rem;
+  border-radius: 0.75rem;
+  border: 0.05rem solid var(--color-border-subtle);
+  background-image:
+    radial-gradient(circle at 0 0, var(--color-board-accent-left) 0, transparent 55%),
+    radial-gradient(circle at 100% 0, var(--color-board-accent-right) 0, transparent 55%),
+    linear-gradient(135deg, var(--color-surface-deep) 0, var(--color-surface-deep) 35%, var(--color-surface-soft) 100%);
+  box-shadow: inset 0 0 0 0.05rem var(--color-border-strong);
+  overflow: hidden;
+}
+
+.board-empty-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  pointer-events: none;
+}
+
+.note {
+  position: absolute;
+  border-radius: 0.75rem;
+  box-shadow:
+    0 1rem 2rem var(--color-note-shadow-soft),
+    0 0 0 0.05rem var(--color-border-note);
+  color: var(--color-text-note);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.note--dragging {
+  box-shadow:
+    0 1rem 2.5rem var(--color-note-shadow-strong),
+    0 0 0 0.05rem var(--color-note-shadow-strong);
+  transform: translate3d(0, 0, 0);
+}
+
+.note-header {
+  height: 1.75rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-note-header-from),
+    var(--color-note-header-to)
+  );
+  border-bottom: 0.05rem solid var(--color-note-header-border);
+  cursor: grab;
+  user-select: none;
+}
+
+.note-header:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-note-header-from),
+    rgba(15, 23, 42, 0.35)
+  );
+}
+
+.note-body {
+  flex: 1;
+  padding: 0.5rem 0.5rem 0.5rem;
+}

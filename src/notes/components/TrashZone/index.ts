@@ -1,0 +1,2 @@
+export { TrashZone } from './TrashZone'
+
